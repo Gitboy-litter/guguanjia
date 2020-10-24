@@ -19,7 +19,7 @@ import java.util.List;
  */
 @Service
 @Transactional
-public class DemandServiceImp  extends BaseServiceImp<Demand,Long> implements DemandService {
+public class DemandServiceImp  extends BaseServiceImp<Demand,Long> implements DemandService<Demand,Long> {
     @Override
     public PageInfo<Demand> selectAllPage(Integer pageNum, Integer pageSize){
         Demand demand=new Demand();

@@ -1,31 +1,31 @@
 package com.chen.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import tk.mybatis.mapper.annotation.KeySql;
 
 import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.util.Date;
 
-@Table(name="demand")
-public class Demand {
-
+@Table
+public class Qualification {
     @Id
-    @KeySql(useGeneratedKeys = true)
     private Long id;
 
-    private String name;
+    private Long uploadUserId;
 
-    private String phone;
+    private SysUser sysUser;
 
-    private String company;
+    private Integer type;
+
+    private String address;
+
+    @Column(name = "`check`")
+    private Integer check;
 
     private String description;
 
-    private Integer status;
-
-    private String treatment;
+    private Long checkUserId;
 
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT")
     private Date createDate;
@@ -37,6 +37,13 @@ public class Demand {
 
     private String createBy;
 
+    public SysUser getSysUser() {
+        return sysUser;
+    }
+
+    public void setSysUser(SysUser sysUser) {
+        this.sysUser = sysUser;
+    }
 
     public Long getId() {
         return id;
@@ -46,28 +53,36 @@ public class Demand {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public Long getUploadUserId() {
+        return uploadUserId;
     }
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+    public void setUploadUserId(Long uploadUserId) {
+        this.uploadUserId = uploadUserId;
     }
 
-    public String getPhone() {
-        return phone;
+    public Integer getType() {
+        return type;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone == null ? null : phone.trim();
+    public void setType(Integer type) {
+        this.type = type;
     }
 
-    public String getCompany() {
-        return company;
+    public String getAddress() {
+        return address;
     }
 
-    public void setCompany(String company) {
-        this.company = company == null ? null : company.trim();
+    public void setAddress(String address) {
+        this.address = address == null ? null : address.trim();
+    }
+
+    public Integer getCheck() {
+        return check;
+    }
+
+    public void setCheck(Integer check) {
+        this.check = check;
     }
 
     public String getDescription() {
@@ -78,20 +93,12 @@ public class Demand {
         this.description = description == null ? null : description.trim();
     }
 
-    public Integer getStatus() {
-        return status;
+    public Long getCheckUserId() {
+        return checkUserId;
     }
 
-    public void setStatus(Integer status) {
-        this.status = status;
-    }
-
-    public String getTreatment() {
-        return treatment;
-    }
-
-    public void setTreatment(String treatment) {
-        this.treatment = treatment == null ? null : treatment.trim();
+    public void setCheckUserId(Long checkUserId) {
+        this.checkUserId = checkUserId;
     }
 
     public Date getCreateDate() {

@@ -606,11 +606,7 @@
                                                 <td class="center">{{demand.createDate}}</td>
                                                 <td class="center">
                                                     <div class="hidden-sm hidden-xs action-buttons">
-                                                        <a class="green" href="update.html" title="处理需求"
-                                                           data-mode="page" data-title="需求处理"
-                                                           data-url="demand/edit/showlayer"
-                                                           data-data="{id:'4'}"
-                                                           data-width="60%"
+                                                        <a class="green" @click="layertoupdate(demand)"
                                                         >
                                                             <i class="ace-icon fa fa-pencil bigger-130"></i>
                                                         </a>

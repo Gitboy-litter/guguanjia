@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 	<head>
+		<base href="/guguanjia/">
 		<meta name="renderer" content="webkit">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
@@ -10,26 +11,26 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
 		<!-- bootstrap & fontawesome -->
-		<link rel="stylesheet" href="../../static/bootstrap/bootstrap.min.css" />
-		<link rel="stylesheet" href="../../static/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="static/bootstrap/bootstrap.min.css" />
+		<link rel="stylesheet" href="static/css/font-awesome.min.css" />
 
 		<!-- ace styles -->
-		<link rel="stylesheet" href="../../static/ace/css/ace.min.css" />
+		<link rel="stylesheet" href="static/ace/css/ace.min.css" />
 
 		<!--[if lte IE 9]>
-			<link rel="stylesheet" href="../../static/ace/css/ace-part2.min.css" />
+			<link rel="stylesheet" href="static/ace/css/ace-part2.min.css" />
 		<![endif]-->
-		<link rel="stylesheet" href="../../static/ace/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="static/ace/css/ace-rtl.min.css" />
 
 		<!--[if lte IE 9]>
-		  <link rel="stylesheet" href="../../static/ace/css/ace-ie.min.css" />
+		  <link rel="stylesheet" href="static/ace/css/ace-ie.min.css" />
 		<![endif]-->
 
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 
 		<!--[if lt IE 9]>
-		<script src="../../static/bootstrap/html5shiv.min.js"></script>
-		<script src="../../static/bootstrap/respond.min.js"></script>
+		<script src="static/bootstrap/html5shiv.min.js"></script>
+		<script src="static/bootstrap/respond.min.js"></script>
 		<![endif]-->
 	</head>
 
@@ -122,35 +123,35 @@
 		<!-- basic scripts -->
 
 		<!--[if !IE]> -->
-		<script src="../../static/jquery/jquery.js"></script>
+		<script src="static/jquery/jquery.js"></script>
 		<!-- <![endif]-->
 
 		<!--[if IE]>
-		<script src="../../static/jquery/jquery-1.11.1.min.js"></script>
+		<script src="static/jquery/jquery-1.11.1.min.js"></script>
 		<![endif]-->
 
 		<!--[if !IE]> -->
 		<script type="text/javascript">
-			window.jQuery || document.write("<script src='../../static/jquery/jquery.min.js'>"+"<"+"/script>");
+			window.jQuery || document.write("<script src='static/jquery/jquery.min.js'>"+"<"+"/script>");
 		</script>
 		<!-- <![endif]-->
 
 		<!--[if IE]>
 		<script type="text/javascript">
-		 window.jQuery || document.write("<script src='../../static/jquery/jquery1x.min.js'>"+"<"+"/script>");
+		 window.jQuery || document.write("<script src='static/jquery/jquery1x.min.js'>"+"<"+"/script>");
 		</script>
 		<![endif]-->
 		
 		<script type="text/javascript">
-			if('ontouchstart' in document.documentElement) document.write("<script src='../../static/jquery/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+			if('ontouchstart' in document.documentElement) document.write("<script src='static/jquery/jquery.mobile.custom.min.js'>"+"<"+"/script>");
 		</script>
 
-		<script type="text/javascript" src="../../static/layer/layer.js"></script>
-		<script type="text/javascript" src="../../static/validate/Validform_v5.3.2_min.js"></script>
+		<script type="text/javascript" src="static/layer/layer.js"></script>
+		<script type="text/javascript" src="static/validate/Validform_v5.3.2_min.js"></script>
 
 		<script type="text/javascript">
 			function refresh(obj) {
-		        obj.src = "../../captcha?width=120&height=32&"+Math.random();
+		        obj.src = "captcha?width=120&height=32&"+Math.random();
 		    };
 
 			jQuery(function($) {

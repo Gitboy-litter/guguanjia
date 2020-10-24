@@ -1,5 +1,6 @@
 package com.chen.service;
 
+import com.chen.entity.Qualification;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -66,6 +67,7 @@ public abstract class BaseServiceImp<T,ID> implements BaseService<T,ID> {
     public List<T> select(T t) {
         return mapper.select(t);
     }
+
 
     @Override
     public T selectOne(T t) {

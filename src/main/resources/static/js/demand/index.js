@@ -29,7 +29,19 @@ let vue = new Vue({
                 end:  ()=> {
                 }
             })
-        }
+        },
+        layertoupdate: function (demand) {
+            layer.obj = demand;
+            layer.open({
+                type: 2,
+                title: '更新',
+                area: ['80%', '80%'],
+                content: 'manager/demand/toUpdate',
+                end:  ()=> {
+                    this.getDemandAll();
+                }
+            })
+        },
     },
     clear: function () {
         this.demand = {};//清空属性数据

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "mybatis-3-mapper.dtd" >
+<mapper namespace="com.chen.dao.QualificationMapper">
+    <resultMap id="getQualificationAndSysUser" type="Qualification" autoMapping="true">
+        <result property="uploadUserId" column="upload_user_id"></result>
+        <association property="sysUser" column="upload_user_id" select="selectSysUserById" autoMapping="true">
+        </association>
+    </resultMap>
+    <select id="getQualificationAndSysUser" resultMap="getQualificationAndSysUser"
+            parameterType="QualificationCondition">
+        select * from qualification
+        <where>
+            <if test="type!=null and type!=''">
+                and type = #{type}
+            </if>
+            <if test="firstDate!=null and firstDate!=''">
+                and create_date&gt;=#{firstDate}
+            </if>
+            <if test="lastDate!=null and lastDate!=''">
+                and create_date &lt;= #{lastDate}
+            </if>
+            <if test="check!=null and check!=''">
+                and check = #{check}
+            </if>
+            and del_flag=0
+        </where>
+    </select>
+    <select id="selectSysUserById" resultType="SysUser">
+        select * from sys_user where id=#{id}
+    </select>
+</mapper>
